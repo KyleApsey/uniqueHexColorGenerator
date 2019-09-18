@@ -5,6 +5,7 @@ function uniqueHexColorGenerator(numberOfUniqueHexCodes = 100) {
     let uniqueHexCodes = [];
     // generate hex codes until uniqueHexCodes is equal to the length desired
     while (uniqueHexCodes.length < numberOfUniqueHexCodes) {
+        numberOfUniqueHexCodes = Math.min((hexLang.length * 6), numberOfUniqueHexCodes);
         let thisHexCode = '';
         // add random hex letters until thisHexCode has a length of 6 characters
         while (thisHexCode.length < 6) {
